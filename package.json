@@ -4,9 +4,14 @@
   "description": "%extension.description%",
   "version": "0.1.0",
   "publisher": "hitzhangjie",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/hitzhangjie/vscode-llm-translation.git"
+  },
+  "homepage": "https://github.com/hitzhangjie/vscode-llm-translation#readme",
+  "bugs": {
+    "url": "https://github.com/hitzhangjie/vscode-llm-translation/issues"
   },
   "icon": "icons/icon128.png",
   "engines": {
@@ -88,7 +93,8 @@
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "lint": "eslint src --ext ts",
-    "package": "vsce package --no-dependencies"
+    "package": "vsce package --no-dependencies",
+    "publish:marketplace": "vsce publish --no-dependencies"
   },
   "devDependencies": {
     "@types/node": "^20.11.0",

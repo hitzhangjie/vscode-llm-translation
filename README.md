@@ -17,6 +17,10 @@
 
 ## 安装
 
+### 从 VS Code 市场安装（推荐）
+
+在 VS Code 扩展面板搜索 **LLM Translation**，或访问 [Marketplace 页面](https://marketplace.visualstudio.com/items?itemName=hitzhangjie.vscode-llm-translation) 安装。
+
 ### 从源码开发调试
 
 ```bash
@@ -75,6 +79,36 @@ npm run package
 ```bash
 npm run compile   # 编译 TypeScript
 npm run watch     # 监听模式
+```
+
+## 发布
+
+推送版本标签后，GitHub Actions 会同时：
+
+1. 发布到 [VS Code Marketplace](https://marketplace.visualstudio.com/manage/publishers/hitzhangjie)
+2. 创建 [GitHub Release](https://github.com/hitzhangjie/vscode-llm-translation/releases) 并附上 VSIX
+
+### 首次发布前准备
+
+1. 在 [Marketplace 管理页](https://marketplace.visualstudio.com/manage) 创建 Publisher，ID 必须为 **`hitzhangjie`**
+2. 在 [Azure DevOps](https://dev.azure.com/) 创建 Personal Access Token，Scopes 勾选 **Marketplace → Manage**
+3. 在 GitHub 仓库 **Settings → Secrets and variables → Actions** 添加 Secret：
+   - 名称：`VSCE_PAT`
+   - 值：上一步生成的 PAT
+
+### 发布新版本
+
+```bash
+# 1. 更新 package.json 中的 version（如 0.1.0 → 0.1.1）
+# 2. 提交并推送标签（标签名建议与 version 对应）
+git tag v0.1.1
+git push origin v0.1.1
+```
+
+也可在本地手动发布到市场（需先 `npx vsce login hitzhangjie`）：
+
+```bash
+npm run publish:marketplace
 ```
 
 ## 许可证

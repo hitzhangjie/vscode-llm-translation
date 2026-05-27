@@ -1,4 +1,4 @@
-name: Release VSIX
+name: Release
 
 on:
   push:
@@ -26,6 +26,11 @@ jobs:
 
       - name: Package VSIX
         run: npm run package
+
+      - name: Publish to VS Code Marketplace
+        run: npm run publish:marketplace
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}
 
       - name: Upload VSIX artifact
         uses: actions/upload-artifact@v4
