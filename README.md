@@ -31,11 +31,15 @@ npm run compile
 ### 打包为 VSIX（可选）
 
 ```bash
-npm install -g @vscode/vsce
-vsce package
+npm install
+npm run package
 ```
 
 在 VS Code 中选择 **Extensions: Install from VSIX...** 安装生成的 `.vsix` 文件。
+
+### 从 GitHub Release 安装
+
+推送版本标签（如 `v0.1.0`）后，GitHub Actions 会自动打包 VSIX 并发布到 [Releases](https://github.com/hitzhangjie/vscode-llm-translation/releases)。下载对应版本的 `.vsix` 文件后，在 VS Code 中选择 **Extensions: Install from VSIX...** 安装。
 
 ## 配置
 

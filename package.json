@@ -3,7 +3,11 @@
   "displayName": "%extension.displayName%",
   "description": "%extension.description%",
   "version": "0.1.0",
-  "publisher": "local",
+  "publisher": "hitzhangjie",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hitzhangjie/vscode-llm-translation.git"
+  },
   "icon": "icons/icon128.png",
   "engines": {
     "vscode": "^1.85.0"
@@ -83,11 +87,13 @@
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
-    "lint": "eslint src --ext ts"
+    "lint": "eslint src --ext ts",
+    "package": "vsce package --no-dependencies"
   },
   "devDependencies": {
     "@types/node": "^20.11.0",
     "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^3.7.1",
     "typescript": "^5.3.3"
   }
 }
