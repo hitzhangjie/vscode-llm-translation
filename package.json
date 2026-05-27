@@ -1,0 +1,93 @@
+{
+  "name": "vscode-llm-translation",
+  "displayName": "%extension.displayName%",
+  "description": "%extension.description%",
+  "version": "0.1.0",
+  "publisher": "local",
+  "icon": "icons/icon128.png",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "llmTranslation.translateToChinese",
+        "title": "%command.translateToChinese.title%",
+        "icon": "icons/icon16.png"
+      },
+      {
+        "command": "llmTranslation.translateToEnglish",
+        "title": "%command.translateToEnglish.title%",
+        "icon": "icons/icon16.png"
+      },
+      {
+        "command": "llmTranslation.translateToOther",
+        "title": "%command.translateToOther.title%",
+        "icon": "icons/icon16.png"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "llmTranslation.translateToChinese",
+          "when": "editorHasSelection",
+          "group": "llmTranslation@1"
+        },
+        {
+          "command": "llmTranslation.translateToEnglish",
+          "when": "editorHasSelection",
+          "group": "llmTranslation@2"
+        },
+        {
+          "command": "llmTranslation.translateToOther",
+          "when": "editorHasSelection",
+          "group": "llmTranslation@3"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "%configuration.title%",
+      "properties": {
+        "llmTranslation.provider": {
+          "type": "string",
+          "enum": [
+            "ollama",
+            "deepseek"
+          ],
+          "enumDescriptions": [
+            "%configuration.provider.ollama%",
+            "%configuration.provider.deepseek%"
+          ],
+          "default": "ollama",
+          "description": "%configuration.provider.description%"
+        },
+        "llmTranslation.model": {
+          "type": "string",
+          "default": "",
+          "description": "%configuration.model.description%"
+        },
+        "llmTranslation.apiKey": {
+          "type": "string",
+          "default": "",
+          "markdownDescription": "%configuration.apiKey.description%"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.3.3"
+  }
+}

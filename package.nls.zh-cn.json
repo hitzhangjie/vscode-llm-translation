@@ -1,0 +1,13 @@
+{
+  "extension.displayName": "LLM 翻译",
+  "extension.description": "通过 OpenAI 兼容的 LLM API（Ollama、DeepSeek）翻译选中文本",
+  "command.translateToChinese.title": "翻译为中文",
+  "command.translateToEnglish.title": "翻译为英文",
+  "command.translateToOther.title": "翻译为...",
+  "configuration.title": "LLM 翻译",
+  "configuration.provider.description": "LLM 服务提供商",
+  "configuration.provider.ollama": "本地 Ollama (http://localhost:11434/v1)",
+  "configuration.provider.deepseek": "DeepSeek (https://api.deepseek.com/v1)",
+  "configuration.model.description": "模型名称。留空则使用提供商默认值：Ollama 为 gpt-oss:20b，DeepSeek 为 deepseek-v4-flash",
+  "configuration.apiKey.description": "API Key（选择 DeepSeek 时必填）"
+}

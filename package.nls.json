@@ -1,0 +1,13 @@
+{
+  "extension.displayName": "LLM Translation",
+  "extension.description": "Translate selected text via OpenAI-compatible LLM APIs (Ollama, DeepSeek)",
+  "command.translateToChinese.title": "Translate to Chinese",
+  "command.translateToEnglish.title": "Translate to English",
+  "command.translateToOther.title": "Translate to...",
+  "configuration.title": "LLM Translation",
+  "configuration.provider.description": "LLM service provider",
+  "configuration.provider.ollama": "Local Ollama (http://localhost:11434/v1)",
+  "configuration.provider.deepseek": "DeepSeek (https://api.deepseek.com/v1)",
+  "configuration.model.description": "Model name. Leave empty to use provider defaults: gpt-oss:20b for Ollama, deepseek-v4-flash for DeepSeek",
+  "configuration.apiKey.description": "API Key (required when using DeepSeek)"
+}
