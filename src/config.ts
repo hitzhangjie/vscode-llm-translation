@@ -38,7 +38,7 @@ export function getLlmConfig(): LlmConfig {
 
 export function validateLlmConfig(config: LlmConfig): string | null {
   if (config.provider === 'deepseek' && !config.apiKey) {
-    return '使用 DeepSeek 时需要配置 API Key。请在设置中搜索 "LLM Translation" 并填写 llmTranslation.apiKey。';
+    return '使用 DeepSeek 时需要配置 API Key。请在设置中搜索 "多语言 LLM 翻译器" 并填写 llmTranslation.apiKey。';
   }
   if (!config.model) {
     return '请配置模型名称 (llmTranslation.model)。';

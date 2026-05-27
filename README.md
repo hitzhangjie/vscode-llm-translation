@@ -5,7 +5,7 @@
 ## 功能
 
 - 编辑器右键菜单：翻译为中文、翻译为英文、翻译为其他语言
-- 流式输出译文到 **LLM Translation** 输出面板
+- 流式输出译文到 **Multilingual LLM Translator** 输出面板
 - 支持 **Ollama**（本地）与 **DeepSeek**（云端）
 - 多语言快捷选择：简体中文、繁体中文、英语、法语、德语、俄语
 
@@ -43,7 +43,7 @@ npm run package
 
 ## 配置
 
-在设置中搜索 **LLM Translation**（或 `llmTranslation`）：
+在设置中搜索 **Multilingual LLM Translator**（或 `llmTranslation`）：
 
 | 设置项 | 说明 | 默认值 |
 |--------|------|--------|

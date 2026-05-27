@@ -8,7 +8,7 @@ let activeAbortController: AbortController | undefined;
 
 function getOutputChannel(): vscode.OutputChannel {
   if (!outputChannel) {
-    outputChannel = vscode.window.createOutputChannel('LLM Translation');
+    outputChannel = vscode.window.createOutputChannel('Multilingual LLM Translator');
   }
   return outputChannel;
 }

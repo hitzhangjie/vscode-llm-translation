@@ -1,10 +1,10 @@
 {
-  "extension.displayName": "LLM 翻译",
+  "extension.displayName": "多语言 LLM 翻译器",
   "extension.description": "通过 OpenAI 兼容的 LLM API（Ollama、DeepSeek）翻译选中文本",
   "command.translateToChinese.title": "翻译为中文",
   "command.translateToEnglish.title": "翻译为英文",
   "command.translateToOther.title": "翻译为...",
-  "configuration.title": "LLM 翻译",
+  "configuration.title": "多语言 LLM 翻译器",
   "configuration.provider.description": "LLM 服务提供商",
   "configuration.provider.ollama": "本地 Ollama (http://localhost:11434/v1)",
   "configuration.provider.deepseek": "DeepSeek (https://api.deepseek.com/v1)",
